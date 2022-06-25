@@ -1,19 +1,18 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-    <ul>
-        <li>
-            Deneme
-        </li>
-        <li>
-            lkdşlgs
-        </li>
-    </ul>
-</body>
+<html>
+  <head>
+    <title>Parent Frame</title>
+    <script>
+      window.addEventListener('beforeunload', function(event) {
+        debugger;
+        console.log('I am the 1st one.'+document.readyState);
+      });
+      window.addEventListener('unload', function(event) {
+        debugger;
+        console.log('I am the 3rd one.' + document.readyState);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>dfwdf</h1>
+  </body>
 </html>
